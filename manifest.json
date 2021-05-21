@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube ads blocker",
+    "version": "1.2",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [{
+        "matches":["https://www.youtube.com/*"] ,
+        "js":["scripts.js"],
+        "run_at":"document_idle"
+    }],
+    "permissions":[
+        "tabs",
+        "activeTab"
+    ],
+    "icons": {
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png" 
+    },
+    "author": "Majeti Naga Homesh"
+}
